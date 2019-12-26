@@ -21,12 +21,14 @@ public class ImmutableQueueTest {
         q1 = q1.enQueue("a");
         q1 = q1.enQueue("b");
         q1 = q1.enQueue("c");
+        Assert.assertEquals(false, q1.isEmpty());
         Assert.assertEquals("a", q1.head());
         q1 = q1.deQueue();
         Assert.assertEquals("b", q1.head());
         q1 = q1.deQueue();
         Assert.assertEquals("c", q1.head());
         q1 = q1.deQueue();
+        Assert.assertEquals(true, q1.isEmpty());
         Assert.assertEquals(q1, ImmutableQueue.getEmptyQueue());
     }
 
