@@ -14,3 +14,11 @@ public interface Queue[T] {
     public T head();
     public boolean isEmpty();
 }
+
+The implementation uses 2 immutable stacks for dequeue and enqueue operations. The dequeuStack is however used to enqueue the very first element of the queue so that dequeue operation always happens from the dequeueStack.
+
+Time complexity-  
+enQueue- O(1)  
+deQueue- O(n) in worst case else O(1)  
+head- O(1)  
+isEmpty- O(1)  
